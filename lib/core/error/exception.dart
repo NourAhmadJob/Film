@@ -7,3 +7,11 @@ class ServerException implements Exception {
 
   List<Object?> get props => [errorMessageModel];
 }
+
+class AuthException implements Exception {
+  final String message ;
+
+  AuthException({required this.message});
+
+  List<Object?> get props => [message];
+}

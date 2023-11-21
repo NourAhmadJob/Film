@@ -16,10 +16,9 @@ class MoviesDataSource extends BaseMovieDataSource {
     final response = await Dio().get(ApiConstance.getNowPlayingUrl);
 
     if(response.statusCode == 200) {
-      return List<MoviesModels>.from( (response.data['results'] as List).map((el) => MoviesModels.fromJson(el))    );
+      return List<MoviesModels>.from( (response.data['results'] as List).map( (el) => MoviesModels.fromJson(el))    );
     }
     else {
-      print("no data");
       throw ServerException(errorMessageModel: ErrorMessageModel.fromJson(response.data));
     }
   }

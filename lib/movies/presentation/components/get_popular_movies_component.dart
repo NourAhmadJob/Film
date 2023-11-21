@@ -5,8 +5,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movies/core/utils/6.1%20dummy.dart';
 import 'package:movies/core/utils/app_constance.dart';
 import 'package:movies/movies/presentation/controller/movie_Bloc/bloc.dart';
+import 'package:movies/movies/presentation/controller/movie_Bloc/event.dart';
 import 'package:movies/movies/presentation/controller/movie_Bloc/state.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../../core/services/service_locator.dart';
 
 class GetPopularMoviesComponent extends StatelessWidget {
   const GetPopularMoviesComponent({Key? key}) : super(key: key);
@@ -29,9 +32,7 @@ class GetPopularMoviesComponent extends StatelessWidget {
                 return Container(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: InkWell(
-                    onTap: () {
-                      /// TODO : NAVIGATE TO  MOVIE DETAILS
-                    },
+                    onTap: (){},
                     child: ClipRRect(
                       borderRadius:
                       const BorderRadius.all(Radius.circular(8.0)),

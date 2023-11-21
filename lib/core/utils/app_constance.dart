@@ -12,4 +12,6 @@ class ApiConstance{
   static String baseImageUrl = 'https://image.tmdb.org/t/p/w500';
 
   static String imageUrl(String path) => '$baseImageUrl$path' ;
+  static String imageUrl2(String path) => '$baseImageUrl$path' ;
+  static String imageUrl3(String path) => '$baseImageUrl$path' ;
 }

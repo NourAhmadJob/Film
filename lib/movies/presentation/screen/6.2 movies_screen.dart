@@ -16,6 +16,8 @@ class MoviesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var bloc = MovieBloc.get(context);
+
     return BlocProvider<MovieBloc>(
       create: (BuildContext context) => sl<MovieBloc>()..add(GetNowPlayingMoviesEvent())..add(PopularMoviesEvent())..add(TopRatedMoviesEvent()),
       child: Scaffold(
@@ -39,9 +41,7 @@ class MoviesScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {
-                        /// TODO : NAVIGATION TO POPULAR SCREEN
-                      },
+                      onTap: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(

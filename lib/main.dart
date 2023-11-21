@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movies/core/services/service_locator.dart';
 import 'package:movies/movies/presentation/screen/6.2%20movies_screen.dart';
-import 'package:movies/movies/presentation/screen/screen%202.dart';
+import 'package:shimmer/main.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NewScreen(),
+      home: const MoviesScreen()
     );
   }
 }

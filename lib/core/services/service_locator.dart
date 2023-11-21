@@ -10,20 +10,24 @@ import 'package:movies/movies/presentation/controller/movie_Bloc/bloc.dart';
 final sl = GetIt.instance;
 
 class ServicesLocator {
-
-  void init(){
+  void init() {
     /// Todo: Bloc
-    sl.registerFactory<MovieBloc>(() => MovieBloc(sl() , sl() , sl()));
+    sl.registerFactory<MovieBloc>(() => MovieBloc(sl(), sl(), sl()));
+
     ///TODO : REPOSATORY
-    sl.registerLazySingleton<BaseMovieReposatroy>(() => MoviesReposatory(baseMovieDataSource: sl()));
+
+
     ///Todo :  DATA_SOURCE
     sl.registerLazySingleton<BaseMovieDataSource>(() => MoviesDataSource());
+
     ///Todo :  USE_CASE
-    sl.registerLazySingleton(() => GetNowPlayingMoviesUseCase(baseMovieReposatroy: sl()));
-    sl.registerLazySingleton(() => PopularMoviesUseCase(baseMovieReposatroy: sl()));
-    sl.registerLazySingleton(() => TopRatedMoviesUseCase(baseMovieReposatroy: sl()));
+    sl.registerLazySingleton(
+        () => GetNowPlayingMoviesUseCase(baseMovieReposatroy: sl()));
+    sl.registerLazySingleton(
+        () => PopularMoviesUseCase(baseMovieReposatroy: sl()));
+    sl.registerLazySingleton(
+        () => TopRatedMoviesUseCase(baseMovieReposatroy: sl()));
 
     /// TODO :
-
   }
 }

@@ -1,3 +1,5 @@
+import 'package:dartz/dartz.dart';
+
 abstract class Failure {
   final String message ;
 
@@ -7,4 +9,8 @@ abstract class Failure {
 
 class ServerFailure extends Failure {
   ServerFailure({required super.message});
+}
+
+class AuthFailure extends Failure {
+  AuthFailure({required super.message});
 }
